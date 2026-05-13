@@ -171,7 +171,7 @@ async function checkAdmin(){
 
       const res =
       await fetch(
-         `../api/check-admin?userId=${user.id}`
+         `./api/check-admin?userId=${user.id}`
       );
 
       const data =
@@ -482,7 +482,7 @@ window.showProfile = async function(){
 
    /* LOAD BALANCE SAU -> HẾT DELAY */
 
-   fetch(`/api/get-balance?userId=${user.id}`)
+   fetch(`./api/get-balance?userId=${user.id}`)
    .then(r=>r.json())
    .then(data=>{
 
@@ -1248,7 +1248,7 @@ window.goQR = function(){
   }
 
   window.location.href =
-    `/deposit/deposit.html?amount=${amount}`;
+    `./deposit/deposit.html?amount=${amount}`;
 
 }
   
